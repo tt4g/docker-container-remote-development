@@ -68,7 +68,7 @@ devcontainer.json sample:
         "devcontainer.extend.yml"
     ],
     "service": "python-app",
-    "workspaceFolder": "...",
+    "workspaceFolder": "/workspace",
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
         "python.pythonPath": "/usr/local/bin/python",
@@ -120,6 +120,7 @@ devcontainer.extend.yml sample:
 version: "3"
 services:
   python-app:
+    # '/workspace' is value of 'workspaceFolder' in '.devcontainer/devcontainer.json'.
     volumes:
       - ..:/workspace:cached
 ```
