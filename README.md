@@ -120,7 +120,9 @@ devcontainer.extend.yml sample:
 version: "3"
 services:
   python-app:
+    # tty is required if Visual Studio Code attaches to this container.
+    tty: true
     # '/workspace' is value of 'workspaceFolder' in '.devcontainer/devcontainer.json'.
     volumes:
-      - ..:/workspace:cached
+      - ./:/workspace:cached
 ```
